@@ -18,16 +18,6 @@ fetch("https://fakestoreapi.com/products/category/men's clothing")
   })
   .then(data => {
     displayProducts(data); // Call function to display products
-    return fetch("https://fakestoreapi.com/products/category/jewelery");
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(data => {
-    displayProducts(data); // Call function to display products
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
