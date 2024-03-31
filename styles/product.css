@@ -2,8 +2,9 @@
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-self: center;
+    margin: 0 auto;
 }
 
 .product {
@@ -18,11 +19,14 @@
     max-width: 100%;
     max-height: 200px;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-title {
     font-size: 1.2em;
-    margin: 0;
+    margin: 10px 0;
 }
 
 .product-price {
