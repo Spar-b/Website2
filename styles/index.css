@@ -9,6 +9,7 @@ html,body
 body
 {
     font-family: 'Montserrat';
+    background-color: #F5F5F5;
 }
 header
 {
@@ -49,6 +50,7 @@ footer
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    justify-content: space-around;
     gap: 30px;
     padding-bottom: -20px;
 }
@@ -60,7 +62,6 @@ footer
     border: none;
     cursor: pointer;
     text-align: center;
-    margin-top: 18px;
 }
 
 .dropdown-content {
@@ -85,4 +86,15 @@ footer
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+.fa-shopping-cart
+{
+    color: white;
+    font-size: 40px;
+}
+li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

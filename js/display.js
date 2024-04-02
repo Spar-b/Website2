@@ -3,6 +3,7 @@ function displayProducts(products) {
     const productsContainer = document.getElementById('productsContainer');
   
     products.forEach(product => {
+
         const productDiv = document.createElement('div');
         productDiv.classList.add('product');
   
@@ -16,8 +17,41 @@ function displayProducts(products) {
         productsContainer.appendChild(productDiv);
 
         productDiv.addEventListener('click', () => {
-            const description = productDiv.querySelector('.product-description');
-            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+            // Create a form element
+            const form = document.createElement('form');
+            form.classList.add('overlay-form');
+
+            // Create a close button
+            const closeButton = document.createElement('button');
+            closeButton.classList.add("overlay-button")
+            closeButton.textContent = 'Close';
+            closeButton.addEventListener('click', () => {
+                form.remove(); // Remove the form when the close button is clicked
+            });
+
+            const title = document.createElement('h2');
+            title.classList.add("title")
+            title.textContent = product.title
+
+            const horizontalContainer = document.createElement('article');
+            horizontalContainer.classList.add('container-horizontal');
+            horizontalContainer.innerHTML= `
+                <img src="${product.image}" alt="${product.title}" class="image">
+                <section class='container-vertical'>
+                    <h3 class='price'>${product.price}$</h3>
+                    <p class='desc'>${product.description}</p>
+                    <button class='cart-button'>Add to cart</button>
+                </section>
+            `;
+
+
+            // Append the close button and text to the form
+            form.appendChild(closeButton);
+            form.appendChild(title);
+            form.appendChild(horizontalContainer);
+
+            // Append the form to the body
+            document.body.appendChild(form);
         });
     });
 }
