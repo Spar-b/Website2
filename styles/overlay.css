@@ -54,3 +54,9 @@
     align-self: center;
     font-weight: bold;
 }
+#quantity
+{
+    width: 10%;
+    padding: 5px;
+    border-radius: 10px;
+}
