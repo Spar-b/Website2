@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function loadCart() {
     const cartData = localStorage.getItem('cart');
-    return cartData ? JSON.parse(cartData) : {}; // Parse stored JSON data or return an empty object
+    return cartData ? JSON.parse(cartData) : {};
 }
 
 // Function to save cart data to localStorage
@@ -48,6 +48,15 @@ function updateCartDisplay() {
         return;
     }
     cartContainer.innerHTML = '';
+    console.log(cart);
+    if(Object.keys(cart).length === 0)
+    {
+        cartContainer.innerHTML = `
+        <p class="cart-empty-text">Your cart is empty!</p>
+        `;
+        return;
+    }
+
     for (const productId in cart) {
         const cartItem = cart[productId];
         const cartItemDiv = document.createElement('div');

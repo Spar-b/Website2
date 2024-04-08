@@ -13,19 +13,24 @@
 <body>
     <header>
         <ul class="header_list">
-            <li class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <a href="#">Menswear</a>
-                    <a href="#">Womenswear</a>
-                    <a href="#">Childswear</a>
-                    <a href="#">On sale</a>
-                </div>
-            </li>
             <li><a href="/index.html"><h1>FabricFiesta</h1></a></li>
             <li><a href="/src/cart.html"><i class="fa-solid fa-shopping-cart"></a></i></li>
         </ul>
     </header>
+    <aside class="sidebar">
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <h3>Filters</h3>
+        <ul class="filters">
+            <li><input type="checkbox" id="filter1"><label for="filter1">Filter 1</label></li>
+            <li><input type="checkbox" id="filter2"><label for="filter2">Filter 2</label></li>
+            <li><input type="checkbox" id="filter3"><label for="filter3">Filter 3</label></li>
+        </ul>
+        <h3>Sort</h3>
+        <ul class="sort">
+            <li><input type="radio" id="asc" name="sort" value="asc"><label for="asc">Ascending</label></li>
+            <li><input type="radio" id="desc" name="sort" value="desc"><label for="desc">Descending</label></li>
+        </ul>
+    </aside>
     <main class="content">
         <section id="productsContainer" class="products-container"></section>
     </main>
@@ -40,5 +45,7 @@
     </footer>
     <script src="/js/fetch.js"></script>
     <script src="/js/display.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/sidebar.js"></script>
 </body>
 </html>

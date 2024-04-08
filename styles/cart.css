@@ -1,12 +1,14 @@
-/* Styles for the cart container */
 #cartContainer {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/* Styles for each cart item */
 .cart-item {
     display: flex;
     align-items: center;
@@ -29,35 +31,37 @@
     background-color: #E3957C;
     color: black;
 }
-/* Styles for the cart item image */
+
 .cart-item-image {
     width: auto; /* Adjust as needed */
     height: 200px; /* Adjust as needed */
     margin-right: 10px;
 }
 
-/* Styles for the cart item title */
 .cart-item-title {
     margin: 0;
     font-size: 16px;
 }
 
-/* Styles for the cart item price */
 .cart-item-price {
     margin: 0;
     font-weight: bold;
 }
 
-/* Styles for the cart item quantity */
 .cart-item-quantity {
     margin: 0;
     font-size: 14px;
     color: #888;
 }
 
-/* Styles for the cart page title */
 .cart-title {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+.cart-empty-text{
+    font-size: 36px;
+    font-family: 'Montserrat';
+    color: #2C3E50;
+    margin: 0 auto;
 }
